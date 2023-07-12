@@ -1,0 +1,159 @@
+## Question 1
+input_1a = [('grilled fish', '$12.50'), ('fish & chips', '$9.50'), ('smoked salmon', '$14.70'), ('raw fish', '$2.99'), ('poached cod', '$20.10'), ('seared pollock', '$16.80')]
+output_1a = [('poached cod', '$20.10'), ('seared pollock', '$16.80'), ('smoked salmon', '$14.70'), ('grilled fish', '$12.50'), ('fish & chips', '$9.50'), ('raw fish', '$2.99')]
+input_1b = [('fish ball', '$1.20'), ('prawn ball', '$1.70'), ('lobster ball', '$2.40'), ('crab ball', '$2.20'), ('cuttlefish ball', '$1.30')]
+output_1b = [('lobster ball', '$2.40'), ('crab ball', '$2.20'), ('prawn ball', '$1.70'), ('cuttlefish ball', '$1.30'), ('fish ball', '$1.20')]
+input_1c = [('chicken nuggets', '$4.00'), ('ice cream', '$2.80'), ('french fries', '$3.90'), ('fish burger', '$4.20'), ('fish burger add 5 cheese', '$7.20')]
+output_1c = [('fish burger add 5 cheese', '$7.20'), ('fish burger', '$4.20'), ('chicken nuggets', '$4.00'), ('french fries', '$3.90'), ('ice cream', '$2.80')]
+input_1d = [('Petrol 98', '$3.220'), ('Petrol 95', '$2.740'), ('Petrol 92', '$2.700'), ('Petrol for showing off', '$10.00')]
+output_1d = [('Petrol for showing off', '$10.00'), ('Petrol 98', '$3.220'), ('Petrol 95', '$2.740'), ('Petrol 92', '$2.700')]
+input_1e = [('vitamin A', '$100'), ('vitamin B', '$20'), ('vitamin C', '$50.90'), ('vitamin D', '$40.95'), ('vitamin E', '$49.99'), ('vitamin K', '$80')]
+output_1e = [('vitamin A', '$100'), ('vitamin K', '$80'), ('vitamin C', '$50.90'), ('vitamin E', '$49.99'), ('vitamin D', '$40.95'), ('vitamin B', '$20')]
+
+
+## Question 2
+input_2a = [3.5, 9.7, 29.9, 61.0, 30.2, 17.6, 29.9, 30.0]
+output_2a = [3.5, 9.7, 19.9, 11.0, 10.2, 17.6, 19.9, 10.0]
+input_2b = [123.0, 88.0, 10.6, 15.2, 3.1, 7.9, 12.1, 22.3]
+output_2b = [13.0, 18.0, 10.6, 15.2, 3.1, 7.9, 12.1, 12.3]
+input_2c = [31.3, 2.8, 26.1, 30.5, 20.9, 10.5, 9.5, 30.9, 8.4, 5.4, 28.0]   # [round(x, 1) for x in np.random.uniform(low=2.0, high=40.0, size=(10,))]
+output_2c = [11.3, 2.8, 16.1, 10.5, 10.9, 10.5, 9.5, 10.9, 8.4, 5.4, 18.0]
+input_2d = [38.2, 2.2, 21.5, 32.9, 25.3, 29.4, 13.1, 36.9, 29.2, 22.6, 7.4, 16.2]
+output_2d = [18.2, 2.2, 11.5, 12.9, 15.3, 19.4, 13.1, 16.9, 19.2, 12.6, 7.4, 16.2]
+input_2e = [27.6, 18.8, 18.5, 25.5, 21.5, 26.7, 24.8, 32.6, 21.8, 36.5, 14.1, 5.4, 13.4]
+output_2e = [17.6, 18.8, 18.5, 15.5, 11.5, 16.7, 14.8, 12.6, 11.8, 16.5, 14.1, 5.4, 13.4]
+
+
+## Question 3
+input_3a = [
+    {'modelA': [92.0], 'modelB': [87.0]}, 
+    {'modelA': [91.3, 92.2, 94.1, 90.7], 'modelB': [89.9, 87.2, 88.3, 88.6]}]
+output_3a = {'modelA': [92.0, 91.3, 92.2, 94.1, 90.7], 'modelB': [87.0, 89.9, 87.2, 88.3, 88.6]}
+input_3b = [
+    {'modelA': [92.3, 92.4, 92.5], 'modelB': [87.3, 87.4, 87.5]}, 
+    {'modelA': [91.6], 'modelB': [87.0]}, 
+    {'modelA': [91.7, 91.6],'modelB': [87.9, 87.4]}, 
+    {'modelA': [92.2], 'modelB': [88.1]}]
+output_3b = {'modelA': [92.3, 92.4, 92.5, 91.6, 91.7, 91.6, 92.2], 'modelB': [87.3, 87.4, 87.5, 87.0, 87.9, 87.4, 88.1]}
+input_3c = [
+    {'modelA': [82.3, 81.4, 80.5], 'modelB': [87.3, 86.4, 85.5], 'modelC': [85.0, 85.2, 85.1]}, 
+    {'modelA': [81.9, 81.6, 81.5], 'modelB': [87.2, 86.9, 85.7], 'modelC': [84.9, 85.3, 85.0]}]
+output_3c = {'modelA': [82.3, 81.4, 80.5, 81.9, 81.6, 81.5], 'modelB': [87.3, 86.4, 85.5, 87.2, 86.9, 85.7], 'modelC': [85.0, 85.2, 85.1, 84.9, 85.3, 85.0]}
+input_3d = [
+    {'modelW': [72.3, 71.4, 70.5], 'modelX': [77.3, 76.4, 75.5], 'modelY': [75.0, 75.2, 75.1]}, 
+    {'modelW': [71.9, 71.6], 'modelX': [77.2, 76.9], 'modelY': [74.9, 75.3]}]
+output_3d = {'modelW': [72.3, 71.4, 70.5, 71.9, 71.6], 'modelX': [77.3, 76.4, 75.5, 77.2, 76.9], 'modelY': [75.0, 75.2, 75.1, 74.9, 75.3]}
+input_3e = [
+    {'Resnet': [87.3], 'Mobilenet': [86.6]},
+    {'Resnet': [88.0], 'Mobilenet': [86.1]},
+    {'Resnet': [85.9], 'Mobilenet': [85.3]},
+    {'Resnet': [86.7], 'Mobilenet': [86.7]},
+    ]
+output_3e = {'Resnet': [87.3, 88.0, 85.9, 86.7], 'Mobilenet': [86.6, 86.1, 85.3, 86.7]}
+
+
+## Question 4
+input_4a = {'modelA': [70.3, 81.2, 76.2, 78.9, 75.7, 79.8], 'modelB': [86.0, 86.9, 85.4, 82.6, 87.1, 81.6]}
+output_4a = {'modelA': [70.3, 81.2, 76.2, 78.9], 'modelB': [86.0, 86.9, 85.4, 82.6]}
+input_4b = {'modelA': [91.3, 90.0, 91.0, 91.1], 'modelB': [86.0, 86.1, 87.4, 86.6, 85.1, 86.0], 'modelC': [82.9, 83.2, 87.9, 88.0, 84.1]}
+output_4b = {'modelA': [91.3, 90.0], 'modelB': [86.0, 86.1], 'modelC': [82.9, 83.2]}
+input_4c = {'modelP': [81.1, 81.2, 81.3], 'modelQ': [82.1, 82.2, 82.3, 82.4], 'modelR': [83.1, 83.2, 83.3, 83.4, 83.5], 'modelS': [85.1, 85.2, 85.3]}
+output_4c = {'modelP': [81.1, 81.2, 81.3], 'modelQ': [82.1, 82.2, 82.3], 'modelR': [83.1, 83.2, 83.3], 'modelS': [85.1, 85.2, 85.3]}
+input_4d = {'Resnet': [81.1, 81.2, 81.3], 'Mobilenet': [82.1, 82.2, 82.3, 82.4], 'Inception': [83.1, 83.2, 83.3, 83.4, 83.5], 'Densenet': [85.1, 85.2, 85.3]}
+output_4d = {'Resnet': [81.1, 81.2], 'Mobilenet': [82.1, 82.2], 'Inception': [83.1, 83.2], 'Densenet': [85.1, 85.2]}
+input_4e = {'Yolov3': [65.9, 65.8, 65.7, 65.6, 65.5], 'Yolov4': [68.9, 68.8, 68.7, 68.6], 'Yolov5': [70.9, 70.8, 70.7], 'Yolov6': [71.9, 71.8, 71.7, 71.6], 'Yolov7': [71.8, 71.7, 71.6]}
+output_4e = {'Yolov3': [65.9, 65.8, 65.7], 'Yolov4': [68.9, 68.8, 68.7], 'Yolov5': [70.9, 70.8, 70.7], 'Yolov6': [71.9, 71.8, 71.7], 'Yolov7': [71.8, 71.7, 71.6]}
+
+
+## Question 5
+input_5a = {'Bencoolen': ['DTL'], 'Outram Park': ['EWL', 'NEL', 'TEL'], 'Bayfront': ['DTL', 'CCL'], 'Esplanade': ['CCL'], 'Botanic Gardens': ['CCL', 'DTL']}
+output_5a = {'DTL': ['Bencoolen', 'Bayfront', 'Botanic Gardens'], 'EWL': ['Outram Park'], 'NEL': ['Outram Park'], 'TEL': ['Outram Park'], 'CCL': ['Bayfront', 'Esplanade', 'Botanic Gardens']}
+input_5b = {'Raffles Places': ['NSL', 'EWL'], 'Marina Bay': ['NSL', 'TEL', 'CCL'], 'Tanjong Pagar': ['EWL'], 'Bouna Vista': ['CCL', 'EWL'], 'Jurong East': ['NSL', 'EWL']}
+output_5b = {'NSL': ['Raffles Places', 'Marina Bay', 'Jurong East'], 'EWL': ['Raffles Places', 'Tanjong Pagar', 'Bouna Vista', 'Jurong East'], 'TEL': ['Marina Bay'], 'CCL': ['Marina Bay', 'Bouna Vista']}
+input_5c = {'Promenade': ['DTL', 'CCL'], 'Bras Basah': ['CCL'], 'Bencoolen': ['DTL'], 'Bendemeer': ['DTL']}
+output_5c = {'DTL': ['Promenade', 'Bencoolen', 'Bendemeer'], 'CCL': ['Promenade', 'Bras Basah']}
+input_5d = {'Bishan': ['NSL', 'CCL'], 'Lorong Chuan': ['CCL'], 'Serangoon': ['NEL', 'CCL']}
+output_5d = {'NSL': ['Bishan'],  'CCL': ['Bishan', 'Lorong Chuan', 'Serangoon'], 'NEL': ['Serangoon']}
+input_5e = {'Chinese Garden': ['EWL'], 'Lakeside': ['EWL'], 'Boon Lay': ['EWL'], 'Pioneer': ['EWL'], 'Joo Koon': ['EWL']}
+output_5e = {'EWL': ['Chinese Garden', 'Lakeside', 'Boon Lay', 'Pioneer', 'Joo Koon']}
+
+
+## Question 6
+input_6a = 'This is just a pretty long hippopotamus sentence without any punctuations other than a full stop at the end.'
+output_6a = ['hippopotamus', 'punctuations']
+input_6b = 'I am averse to the sesquipedalian prose of scientific journals.'
+output_6b = ['sesquipedalian']
+input_6c = 'I am Puss best friend. And his therapy dog. My home is where my friends are.'
+output_6c = ['friends', 'therapy']
+input_6d = 'Oh, I have been called all kinds of name. Dog. Bad dog. Stupid dog. Hey you. Is he deranged.'
+output_6d = ['deranged']
+input_6e = 'This string actually contains words of eight letters. The words absolute, abstract, academic, accuracy, actually and accurate all starts with the letter A.'
+output_6e = ['absolute', 'abstract', 'academic', 'accuracy', 'accurate', 'actually', 'contains']
+
+
+## Question 7
+input_7a = Experience()
+input_7a.observe(Flower('green', 'minty')); input_7a.observe(Flower('orange', 'zesty')); input_7a.observe(Flower('purple', 'fruity')); input_7a.observe(Flower('orange', 'zesty')); input_7a.observe(Flower('red', 'sweet'))
+input_7a.recall()
+output_7a = [('orange', 'zesty')]
+input_7b = Experience()
+input_7b.observe(Flower('pink', 'minty')); input_7b.observe(Flower('pink', 'zesty')); input_7b.observe(Flower('pink', 'fruity')); input_7b.observe(Flower('pink', 'fruity')); input_7b.observe(Flower('orange', 'minty')); input_7b.observe(Flower('orange', 'zesty')); input_7b.observe(Flower('red', 'zesty'))
+output_7b = [('pink', 'fruity')]
+input_7c = Experience()
+input_7c.observe(Flower('pink', 'sweet')); input_7c.observe(Flower('pink', 'sweet')); input_7c.observe(Flower('red', 'sweet')); input_7c.observe(Flower('yellow', 'salty')); input_7c.observe(Flower('yellow', 'salty'))
+output_7c = {('pink', 'sweet'), ('yellow', 'salty')}
+input_7d = Experience()
+input_7d.observe(Flower('pink', 'sweet')); input_7d.observe(Flower('pink', 'sweet')); input_7d.observe(Flower('red', 'sweet')); input_7d.observe(Flower('yellow', 'salty')); input_7d.observe(Flower('yellow', 'salty')); input_7d.observe(Flower('red', 'sweet')); input_7d.observe(Flower('red', 'sweet'))
+output_7d = {('red', 'sweet')}
+input_7e = Experience()
+input_7e.observe(Flower('blue', 'redbull')); input_7e.observe(Flower('orange', 'redbull')); input_7e.observe(Flower('silver', 'redbull')); input_7e.observe(Flower('silver', 'redbull')); input_7e.observe(Flower('orange', 'redbull')); input_7e.observe(Flower('blue', 'redbull')); input_7e.observe(Flower('gold', 'redbull')); 
+output_7e = {('blue', 'redbull'), ('orange', 'redbull'), ('silver', 'redbull')}
+
+
+## Question 8
+input_8a = PussInBoots()
+input_8a.track('wolf', 30, 99); input_8a.track('lion', 270, 4); input_8a.track('snake', 130, 3); input_8a.track('wolf', 80, 1)
+output_8a = {'lion': (270, 4), 'snake': (130, 3), 'wolf': (80, 1)}
+input_8b = PussInBoots()
+input_8b.track('bear', 170, 12); input_8b.track('bear', 270, 8); input_8b.track('Jack', 299, 7); input_8b.track('bear', 260, 9); input_8b.track('bear', 280, 6)
+output_8b = {'bear': (260, 9), 'Jack': (299, 7)}
+input_8c = PussInBoots()
+input_8c.track('Humpty Dumpty', 999, 2)
+output_8c = {}
+input_8d = PussInBoots()
+input_8d.track('golem', 150, 9); input_8d.track('giant', 360, 7); input_8d.track('golem', 115, 7); input_8d.track('giant', 260, 8); input_8d.track('golem', 120, 6); input_8d.track('giant', 160, 12)
+output_8d = {'golem': (115, 7), 'giant': (260, 8)}
+input_8e = PussInBoots()
+input_8e.track('death', 4, 999); input_8e.track('death', 240, 8)
+output_8e = {'death': (240, 8)}
+
+
+## Question 9
+input_9a = Warehouse()
+input_9a.define_container(Container(50.0, 20.0, 1000.1, 200))
+output_9a = 0.0
+input_9b = Warehouse()
+input_9b.define_container(Container(50.1, 20.1, 10.1, 1))
+output_9b = 970299.0
+input_9c = Warehouse()
+input_9c.define_container(Container(49.99, 19.99, 9.99, 5))
+output_9c = 5000000.0
+input_9d = Warehouse()
+input_9d.define_container(Container(20.1, 50.1, 10.1, 1))
+output_9d = 957528.0
+input_9e = Warehouse()
+input_9e.define_container(Container(12.3456, 65.4321, 7.89, 98.7))
+output_9e = 151099830.0
+
+
+## Question 10
+input_10a = Raichu(100, 'kitty-eyes')
+output_10a = 'Raichu attack using tackle and kitty-eyes, dealing 100 damage'
+input_10b = Raichu(5, 'growl')
+output_10b = 'Raichu attack using tackle and growl, dealing 5 damage'
+input_10c = Raichu(12, 'quick attack')
+output_10c = 'Raichu attack using tackle and quick attack, dealing 12 damage'
+input_10d = Raichu(2023, 'thunder')
+output_10d = 'Raichu attack using tackle and thunder, dealing 2023 damage'
+input_10e = Raichu(30, 'Iron Tail')
+output_10e = 'Raichu attack using tackle and Iron Tail, dealing 30 damage'
